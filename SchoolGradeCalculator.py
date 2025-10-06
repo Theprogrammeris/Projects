@@ -10,12 +10,13 @@ try:
     grade2_float = float(grade2)
     result = (grade1_float + grade2_float) / 2
 
-except:
-    ...
-
+except ValueError:
+    print("Error! Try only numbers!")
+    
 if result >= 6:
     print(f"The student {name} passed with {result} points.")
 elif result >= 4.9:
     print(f"The student {name} is in recovery with {result} points.")
 elif result < 4:
     print(f"The student {name} failed with {result} points.")
+
